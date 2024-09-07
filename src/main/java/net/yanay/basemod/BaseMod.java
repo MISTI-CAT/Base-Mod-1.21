@@ -2,6 +2,9 @@ package net.yanay.basemod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.yanay.basemod.block.ModBlocks;
+import net.yanay.basemod.item.ModItemGroups;
+import net.yanay.basemod.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,7 +14,8 @@ public class BaseMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModItems.registerModItems();
 
-		LOGGER.info("Hello Fabric world!");
+		ModItemGroups.registerItemGroups();
 	}
 }
